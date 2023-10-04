@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'home.css'%}">
+    </head>
+    <body>
+        <div id="card">
+            <div id="top">
+                <h2>
+                    WeChat App
+                </h2>
+            </div>
+
+            <div id="bottom">
+                <form action="check" method="POST">
+                    {% csrf_token %}
+                    <label for="room">
+                        Enter the room name
+                    </label>
+                    <br>
+                    <input type="text" class="field" name="room">
+                    <br>
+                    <label for="uname">
+                        Enter the username
+                    </label>
+                    <br>
+                    <input type="text" class="field" name="username">
+                    <br>
+                    <br>
+                    <input type="submit" value="Enter room" id="enter">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

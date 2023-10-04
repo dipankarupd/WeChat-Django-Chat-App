@@ -1,0 +1,36 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>
+            Chat Room
+        </title>
+        <link rel="stylesheet" href="{% static 'room.css' %}">
+    </head>
+
+    <body>
+        
+        <div id="card">
+            <h2>
+                Chat Room: XXX
+            </h2>
+
+            <div class="chats">
+                <p>
+                        This is the trial message.
+                </p>
+            </div>
+
+            <div id="message-container">
+                <form action="">
+                    <input type="hidden" name="username" id="username" value="">
+                    <input type="hidden" name="room_id" id="room_id" value="">
+                    <input type="text" id="txt" name="message" placeholder="Type message here">
+                    <input type="submit" value="Send" id="send">
+                </form>
+                
+            </div>
+            
+        </div>
+    </body>
+</html>
