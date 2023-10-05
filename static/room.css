@@ -51,8 +51,12 @@ body {
 
 }
 
+#send-container {
+    display: flex;
+}
+
 #txt {
-    width: 75%;
+    width: 260px;
     height: 35px;
     border-radius: 8px;
     margin-top: 15px;
