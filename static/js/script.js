@@ -14,7 +14,7 @@ $(document).on('submit', '#post-form', (event)=> {
         },
 
         success: (data) => {
-            alert(data)
+            // alert(data)
         }
     });
 

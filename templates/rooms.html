@@ -12,17 +12,17 @@
 
     <body>
         
-        <div id="card">
+        <div id="card" data-roomname="{{room.room}}">
             <h2>
                 Chat Room: {{room.room}}
             </h2>
 
-            <div class="chats">
-                <p>
-                        This is the trial message.
-                </p>
+            <div id="chat-container">
+        
             </div>
-
+            
+            <script src="{% static 'js/show_message.js' %}">
+            </script>
             <div id="message-container">
                 <form id="post-form">
                     {%csrf_token%}
@@ -40,5 +40,5 @@
         </div>
     </body>
 
-    <script src="{% static 'script.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </html>

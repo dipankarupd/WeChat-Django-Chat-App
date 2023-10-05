@@ -6,4 +6,5 @@ urlpatterns = [
     path('<str:rooms>/', views.rooms, name='rooms'),
     path('check', views.check, name='check'),
     path('send', views.send, name='send'),
+    path('get/<str:room>/', views.getMessage, name='getMessage'),
 ]

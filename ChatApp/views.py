@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Room, Message
-from django.http import HttpResponse  
+from django.http import HttpResponse, JsonResponse  
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
@@ -39,3 +40,10 @@ def send(req):
     msg = Message.objects.create(username = username, message = message, room = room_id)
     msg.save()
     return HttpResponse('Message sent successfully')
+
+
+def getMessage(req, room):
+    room_detail = get_object_or_404(Room,room = room)
+    messages = Message.objects.filter(room = room_detail.id)
+
+    return JsonResponse({"message": list(messages.values())})

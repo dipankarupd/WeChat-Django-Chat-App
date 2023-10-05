@@ -25,7 +25,11 @@ body {
 #card h2 {
     text-align: center;
 }
-
+#chat-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .chats {
     background-color: cadetblue;
     width: 95%;
