@@ -12,7 +12,7 @@ $(document).ready(()=> {
                 $('#chat-container').empty()
     
                 for(var key in response.message) {
-                    temp = '<div class="chats"><b>'+response.message[key].username+'</b><p>'+response.message[key].message+'</p> <h5>'+response.message[key].time+'</h5></div>'
+                    temp = '<div class="chats"><h4>'+response.message[key].username+'</h4><br><p>'+response.message[key].message+'</p><br><h5>'+response.message[key].time+'</h5></div>'
                     $('#chat-container').append(temp)
                 }
             },

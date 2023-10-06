@@ -5,7 +5,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin: 0; /* Remove default body margin */
+    overflow: hidden; /* Prevent body scrolling */
 }
 
 #card {
@@ -14,21 +15,29 @@ body {
     background-color: #F8F0E5;
     border: none;
     border-radius: 12px;
-    flex-direction: column;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    align-items: center;
-    position: relative;
+    overflow: hidden; /* Hide overflow of the card */
 }
-
+#title-container {
+    width: 100%;
+    height: 60px;
+    background-color: #fff; 
+    color: #000;
+    text-align: center;
+    line-height: 50px;
+    position: sticky; 
+    top: 0;
+    z-index: 1; 
+}
 #card h2 {
     text-align: center;
 }
 #chat-container {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    flex-grow: 1; 
+    overflow-y: auto; 
+    padding: 10px; 
 }
 .chats {
     background-color: cadetblue;
@@ -38,21 +47,37 @@ body {
     border: 1px solid #0F2C59;
     display: flex;
     align-items: flex-start ;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.chats h4 {
+margin: 5px 10px;
+    font-size: 3.2vh;
+
+}
+.chats p {
+    margin: 5 10;
+
 }
 
-.chats p {
+.chats h5 {
     margin: 0;
-    padding: 10px;
+    position: absolute;
+    bottom: 5;
+    right: 10;
 }
 
 #message-container {
-    position: absolute;
-    bottom: 0px;
     width: 100%;
     height: 60px;
-    display: flex;
-    align-items: flex-start;    
-
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 60px;
+    position: sticky; 
+    bottom: 0;
+    z-index: 1; 
 }
 
 #send-container {

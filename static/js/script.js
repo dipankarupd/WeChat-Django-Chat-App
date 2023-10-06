@@ -17,6 +17,6 @@ $(document).on('submit', '#post-form', (event)=> {
             // alert(data)
         }
     });
-
-    document.getElementById('message').value = ''
+    document.getElementById('txt').value = ''
+    
 });
