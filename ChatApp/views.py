@@ -25,7 +25,6 @@ def check(req):
 
     if Room.objects.filter(room=roomname).exists():
         return redirect('/'+roomname+'/?username='+username)
-
     else:
         new_room = Room.objects.create(room=roomname)
         new_room.save()

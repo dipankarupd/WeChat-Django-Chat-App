@@ -80,8 +80,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'wechat',
         'USER': 'postgres',
-        'PASSWORD': 'dru563',
-        'HOST': 'localhost',
+        'PASSWORD': 'password',
+        'HOST': 'db',
     }
 }
 
